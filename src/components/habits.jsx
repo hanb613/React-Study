@@ -11,11 +11,6 @@ class Habits extends Component {
   };
 
   handleIncrement = (habit) => {
-    /*
-    habit.count++;
-    this.setState(this.state);
-    */ // 이렇게 해도 되지만, 리액트에서는 state를 직접 수정하는 것이 좋지 않다.
-
     const habitsArr = [...this.state.habits];
     const index = habitsArr.indexOf(habit);
 
