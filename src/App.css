@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Rubik:wght@300&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -35,14 +37,18 @@ button {
 .habits {
   padding: 0.5em;
   padding-top: 2em;
+
+  font-family: "Dosis", sans-serif;
 }
 
 .add-input {
   font-size: 2rem;
+  margin-right: 0.2em;
 }
 
-.add-input {
-  margin-right: 0.2em;
+.add-form {
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .add-button {
@@ -51,6 +57,7 @@ button {
   padding: 0.3em 0.5em;
   background-color: green;
   color: white;
+  border: none;
 }
 
 .habit {

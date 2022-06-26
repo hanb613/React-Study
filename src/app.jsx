@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./app.css";
 import Habits from "./components/habits";
 import Navbar from "./components/navbar";
+import AddForm from "./components/addForm";
 
 class App extends Component {
   state = {
@@ -51,6 +52,7 @@ class App extends Component {
         <Navbar
           totalCount={this.state.habits.filter((item) => item.count > 0).length}
         />
+        <AddForm onAdd={this.handleAdd} />
         <Habits
           habits={this.state.habits}
           onIncrement={this.handleIncrement}
