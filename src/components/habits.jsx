@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AddForm from "./addForm";
 import Habit from "./habit";
 
 class Habits extends Component {
@@ -18,6 +17,9 @@ class Habits extends Component {
               />
             ))}
           </ul>
+          <button className="habits-reset" onClick={this.props.onReset}>
+            Reset All
+          </button>
         </div>
       </>
     );
