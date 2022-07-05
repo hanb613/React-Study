@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import "./app.css";
+import styles from "./app.module.css";
 import VideoList from "./components/video_list/video_list";
+import VideoSearch from "./components/video_search/video_search";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -22,7 +23,12 @@ function App() {
       .catch((error) => console.log("error", error));
   }, []);
 
-  return <VideoList videos={videos} />;
+  return (
+    <div className={styles.app}>
+      <VideoSearch />
+      <VideoList videos={videos} />
+    </div>
+  );
 }
 
 export default App;
