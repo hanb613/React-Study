@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./video_search.module.css";
 
-const VideoSearch = ({ onSearch }) => {
+const VideoSearch = ({ onSearch, Home }) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -19,9 +19,14 @@ const VideoSearch = ({ onSearch }) => {
     }
   };
 
+  const youtubeHome = () => {
+    inputRef.current.value = "";
+    Home();
+  };
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={youtubeHome}>
         <img
           className={styles.img}
           src={process.env.PUBLIC_URL + "/images/logo.png"}

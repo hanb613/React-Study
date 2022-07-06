@@ -14,6 +14,12 @@ function App({ youtube }) {
       .then((videos) => setVideos(videos));
   };
 
+  const home = () => {
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
+  };
+
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -22,7 +28,7 @@ function App({ youtube }) {
 
   return (
     <div className={styles.app}>
-      <VideoSearch onSearch={search} />
+      <VideoSearch onSearch={search} Home={home} />
       <VideoList videos={videos} />
     </div>
   );
