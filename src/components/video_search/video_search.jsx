@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
+import { memo } from "react";
 import styles from "./video_search.module.css";
 
-const VideoSearch = ({ onSearch, Home }) => {
+const VideoSearch = memo(({ onSearch, Home }) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -49,6 +50,6 @@ const VideoSearch = ({ onSearch, Home }) => {
       </button>
     </header>
   );
-};
+});
 
 export default VideoSearch;
