@@ -5,3 +5,33 @@
 .description {
   white-space: pre-wrap;
 }
+
+.video_info {
+  display: inline;
+}
+
+.thumbs {
+  display: flex;
+  justify-content: right;
+}
+
+.thumbsUp {
+  background: none;
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.thumbsDown {
+  background: none;
+  border: 0;
+  font-size: 1em;
+  margin-left: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.thumbsUpIcon,
+.thumbsDownIcon {
+  margin-right: 5px;
+}
