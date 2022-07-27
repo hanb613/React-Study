@@ -12,6 +12,8 @@ function App({ youtube }) {
 
   const [selectedVideo, setSelectedVideo] = useState(null);
 
+  const thumbsCheck = useState(false);
+
   const selectVideo = (video) => {
     setSelectedVideo(video);
   };
@@ -49,7 +51,7 @@ function App({ youtube }) {
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
-            <VideoDetail video={selectedVideo} />
+            <VideoDetail video={selectedVideo} check={thumbsCheck} />
           </div>
         )}
         <div className={styles.list}>
