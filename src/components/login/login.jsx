@@ -10,16 +10,20 @@ const Login = ({ authService }) => {
       .then(console.log());
   };
   return (
-    <section className>
+    <section className={styles.login}>
       <Header />
       <section>
-        <h1>Login</h1>
-        <ul>
-          <li>
-            <button onClick={onLogin}>Google</button>
+        <h1 className={styles.title}>Login</h1>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <button className={styles.btn} onClick={onLogin}>
+              Google
+            </button>
           </li>
-          <li>
-            <button onClick={onLogin}>Github</button>
+          <li className={styles.item}>
+            <button className={styles.btn} onClick={onLogin}>
+              Github
+            </button>
           </li>
         </ul>
       </section>
