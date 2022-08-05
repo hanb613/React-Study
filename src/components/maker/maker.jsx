@@ -8,46 +8,10 @@ import Preview from "../preview/preview";
 import styles from "./maker.module.css";
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
+  const navigate = useNavigate();
   const navigateState = useNavigate().state;
   const [userId, setUserId] = useState(navigateState && navigateState.id);
-
-  const [cards, setCards] = useState({
-    1: {
-      id: "1",
-      name: "ABC",
-      company: "Samsung",
-      theme: "dark",
-      title: "Software Engineer",
-      email: "ABC123@naver.com",
-      message: "go for it",
-      fileName: "abc",
-      fileURL: null,
-    },
-    2: {
-      id: "2",
-      name: "DEF",
-      company: "Naver",
-      theme: "colorful",
-      title: "Software Engineer",
-      email: "DEF456@naver.com",
-      message: "go for it !",
-      fileName: "def",
-      fileURL: null,
-    },
-    3: {
-      id: "3",
-      name: "GHI",
-      company: "Google",
-      theme: "light",
-      title: "Software Engineer",
-      email: "GHI789@gmail.com",
-      message: "go for it !!",
-      fileName: "ghi",
-      fileURL: null,
-    },
-  });
-
-  const navigate = useNavigate();
+  const [cards, setCards] = useState({});
 
   const onLogout = () => {
     authService.logout();
