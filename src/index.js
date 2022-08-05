@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.module.css";
 import App from "./app";
 import AuthService from "./service/auth_service";
@@ -11,6 +11,7 @@ import CardRepository from "./service/card_repository";
 const authService = new AuthService(firebaseApp);
 const imageUploader = new ImageUploader();
 const cardRepository = new CardRepository();
+
 const FileInput = (props) => (
   <ImageFileInput {...props} imageUploader={imageUploader} />
 );
