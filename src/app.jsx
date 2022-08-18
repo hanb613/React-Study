@@ -7,7 +7,7 @@ import VideoDetail from "./components/video_detail/video_detail";
 import VideoList from "./components/video_list/video_list";
 import VideoSearch from "./components/video_search/video_search";
 
-function App({ youtube }) {
+function App({ youtube, authService }) {
   const [videos, setVideos] = useState([]);
 
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -47,7 +47,8 @@ function App({ youtube }) {
 
   return (
     <div className={styles.app}>
-      <VideoSearch onSearch={search} Home={home} />
+      <VideoSearch onSearch={search} Home={home} authService={authService} />
+
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
