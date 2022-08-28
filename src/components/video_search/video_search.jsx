@@ -1,12 +1,10 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import { memo } from "react";
+import Button from "../button/button";
 import styles from "./video_search.module.css";
 
 const VideoSearch = memo(({ onSearch, Home, authService }) => {
-  const [user, setUser] = useState(false);
-
-  const btnRef = useRef();
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -27,18 +25,6 @@ const VideoSearch = memo(({ onSearch, Home, authService }) => {
   const youtubeHome = () => {
     inputRef.current.value = "";
     Home();
-  };
-
-  const onLogInOut = () => {
-    if (user === true) {
-      authService.logout();
-      setUser(false);
-      btnRef.current.innerText = "Login";
-    } else {
-      authService.login();
-      setUser(true);
-      btnRef.current.innerText = "Logout";
-    }
   };
 
   return (
@@ -64,11 +50,8 @@ const VideoSearch = memo(({ onSearch, Home, authService }) => {
           src={process.env.PUBLIC_URL + "/images/search.png"}
         ></img>
       </button>
-      {
-        <button ref={btnRef} className={styles.logInOut} onClick={onLogInOut}>
-          Login
-        </button>
-      }
+
+      <Button authService={authService} />
     </header>
   );
 });
