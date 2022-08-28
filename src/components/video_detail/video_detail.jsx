@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./video_detail.module.css";
 import {
   FaRegThumbsUp,
@@ -13,6 +13,8 @@ const VideoDetail = ({
   video: { statistics },
   check,
 }) => {
+  const likeNum = Number(statistics.likeCount);
+
   const [number, setNumber] = useState(Number(statistics.likeCount));
   const [LikeCheck, setLikeCheck] = useState(check[0]);
   const [DisLikeCheck, setDisLikeCheck] = useState(!check[0]);
@@ -35,6 +37,10 @@ const VideoDetail = ({
     setDisLikeCheck(!DisLikeCheck);
     setLikeCheck(false);
   };
+
+  useEffect(() => {
+    setNumber(likeNum);
+  }, [likeNum]);
 
   return (
     <>
