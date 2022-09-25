@@ -7,11 +7,13 @@
  <br> 
  
 > React-Hooks api 사용 <br> 
+
+> postCSS를 활용한 module CSS 적용 <br> 
  
 > React-router를 이용한 동적 페이지 생성 및 useNavigate 사용 <br> 
 
 > Firebase의 Authentication을 이용하여 간단하게 로그인 (구글, 깃허브) <br> 
 
-> Cloudinary로 사진 DB 저장 <br> 
+> Cloudinary로 이미지 저장 <br> 
 
-> postCSS를 활용한 module CSS 적용 <br> 
+
