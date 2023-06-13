@@ -1,0 +1,23 @@
+@value makerGreen, makerWhite, makerLightPink from "../../common/colors.css";
+@value mediaQuery from '../../common/size.css';
+
+.maker {
+  width: 100%;
+  height: 100%;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  background-color: makerWhite;
+}
+
+.container {
+  display: flex;
+  flex: 1; /* flex: 1 1 0 */
+  min-height: 0;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .container {
+    flex-direction: column;
+  }
+}
